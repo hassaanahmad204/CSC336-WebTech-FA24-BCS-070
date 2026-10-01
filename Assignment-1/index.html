@@ -4,51 +4,90 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume - Muhammad Hassaan Ahmad</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="resume-container">
+      <!-- Semantic Header with Photo, Tagline, and Nav -->
       <header class="resume-header">
-        <h1>Muhammad Hassaan Ahmad</h1>
-        <p class="role-title">AI/ML Engineer</p>
-        <p class="summary">
-          BSc Computer Science student with a strong foundation in artificial
-          intelligence and machine learning, seeking to contribute to innovative
-          projects in the tech industry.
-        </p>
+        <div class="header-content">
+          <img
+            src="images/profilepic.png"
+            alt="Profile photo of Muhammad Hassaan Ahmad"
+            class="profile-photo"
+          />
+          <div class="header-text">
+            <h1>Muhammad Hassaan Ahmad</h1>
+            <p class="role-title">AI/ML Engineer &amp; Software Developer</p>
+            <nav class="resume-nav">
+              <a href="#about">About</a>
+              <span class="nav-separator">|</span>
+              <a href="#education">Education</a>
+              <span class="nav-separator">|</span>
+              <a href="#skills">Skills</a>
+              <span class="nav-separator">|</span>
+              <a href="#experience">Experience</a>
+              <span class="nav-separator">|</span>
+              <a href="#projects">Projects</a>
+              <span class="nav-separator">|</span>
+              <a href="#contact">Contact</a>
+            </nav>
+          </div>
+        </div>
       </header>
 
       <div class="resume-body">
-        <!-- Left Column -->
+        <!-- Left Column: Sidebar -->
         <aside class="sidebar">
-          <section class="section">
+          <!-- Contact Section with Real Anchor Tags -->
+          <section class="section" id="contact">
             <h2>Contact</h2>
             <ul class="contact-list">
-              <li>Email: hassaanahmad5@hotmail.com</li>
-              <li>GitHub: github.com/hassaanahmad204</li>
-              <li>LinkedIn: linkedin.com/in/muhammad-hassaan-ahmad</li>
+              <li>
+                <strong>Email:</strong>
+                <a href="mailto:hassaanahmad5@hotmail.com"
+                  >hassaanahmad5@hotmail.com</a
+                >
+              </li>
+              <li>
+                <strong>GitHub:</strong>
+                <a
+                  href="https://github.com/hassaanahmad204"
+                  target="_blank"
+                  rel="noopener"
+                  >github.com/hassaanahmad204</a
+                >
+              </li>
+              <li>
+                <strong>LinkedIn:</strong>
+                <a
+                  href="https://linkedin.com/in/muhammad-hassaan-ahmad"
+                  target="_blank"
+                  rel="noopener"
+                  >muhammad-hassaan-ahmad</a
+                >
+              </li>
             </ul>
           </section>
 
-          <!-- Education Section -->
-          <section class="section">
+          <!-- Education Section in Semantic List -->
+          <section class="section" id="education">
             <h2>Education</h2>
             <div class="education-item">
               <h3 class="degree-title">BS in Computer Science</h3>
-              <p class="institution">
-                COMSATS University Islamabad, Lahore Campus
-              </p>
+              <p class="institution">University / College Name</p>
               <span class="education-date">2024 – 2028 (Expected)</span>
               <ul class="coursework-list">
-                <li>
-                  Relevant Coursework: Web Technologies, Data Structures &
-                  Algorithms, Database Systems, Artificial Intelligence
-                </li>
+                <li>Web Technologies</li>
+                <li>Data Structures &amp; Algorithms</li>
+                <li>Database Systems</li>
+                <li>Artificial Intelligence</li>
               </ul>
             </div>
           </section>
 
-          <section class="section">
+          <!-- Skills Section -->
+          <section class="section" id="skills">
             <h2>Technical Skills</h2>
             <div class="skill-tags">
               <span class="tag">HTML5 / CSS3</span>
@@ -57,13 +96,28 @@
               <span class="tag">C++</span>
               <span class="tag">JavaScript</span>
               <span class="tag">SQL / Databases</span>
+              <span class="tag">Git &amp; GitHub</span>
             </div>
           </section>
         </aside>
 
-        <!-- Right Column -->
+        <!-- Right Column: Main Content -->
         <main class="main-content">
-          <section class="section">
+          <!-- Dedicated About Me Section -->
+          <section class="section" id="about">
+            <h2>About Me</h2>
+            <p class="about-text">
+              Undergraduate Computer Science student focused on artificial
+              intelligence, machine learning, and distributed software systems.
+              Experienced in end-to-end data pipeline engineering, relational
+              database design, and real-time backend architectures. Passionate
+              about applying algorithmic rigor and clean code practices to
+              deliver scalable technical solutions.
+            </p>
+          </section>
+
+          <!-- Experience Section -->
+          <section class="section" id="experience">
             <h2>Experience</h2>
             <article class="item">
               <div class="item-header">
@@ -91,7 +145,8 @@
             </article>
           </section>
 
-          <section class="section">
+          <!-- Projects Section -->
+          <section class="section" id="projects">
             <h2>Projects</h2>
             <article class="item">
               <div class="item-header">
@@ -123,7 +178,7 @@
 
             <article class="item">
               <div class="item-header">
-                <h3>E-Commerce & Sales Relational Database System</h3>
+                <h3>E-Commerce &amp; Sales Relational Database System</h3>
                 <span class="date">May 2026</span>
               </div>
               <p class="tech-stack">
@@ -155,6 +210,14 @@
           </section>
         </main>
       </div>
+
+      <!-- Semantic Footer -->
+      <footer class="resume-footer">
+        <p>
+          &copy; 2026 Muhammad Hassaan Ahmad. Designed &amp; Developed with
+          HTML5 &amp; CSS3.
+        </p>
+      </footer>
     </div>
   </body>
 </html>
