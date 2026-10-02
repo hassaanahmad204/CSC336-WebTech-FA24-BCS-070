@@ -1,17 +1,14 @@
-/* =========================================
-   1. CSS Variables & Design Tokens
-   ========================================= */
 :root {
-  --primary-color: #1e3a8a; /* Deep navy */
-  --primary-accent: #3b82f6; /* Accent blue */
-  --primary-light: #eff6ff; /* Light blue tint */
-  --text-main: #1f2937; /* Charcoal */
-  --text-muted: #6b7280; /* Slate grey */
-  --bg-page: #f3f4f6; /* Cool light grey */
-  --bg-card: #ffffff; /* Pure white */
-  --border-color: #e5e7eb; /* Soft divider */
-  --tag-bg: #e0e7ff; /* Light indigo tag background */
-  --tag-text: #3730a3; /* Dark indigo tag text */
+  --primary-color: #1e3a8a;
+  --primary-accent: #3b82f6;
+  --primary-light: #eff6ff;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --bg-page: #f3f4f6;
+  --bg-card: #ffffff;
+  --border-color: #e5e7eb;
+  --tag-bg: #e0e7ff;
+  --tag-text: #3730a3;
   --shadow-md:
     0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
   --radius-sm: 4px;
@@ -21,9 +18,6 @@
     Cantarell, "Helvetica Neue", sans-serif;
 }
 
-/* =========================================
-   2. Reset & Box Model Standards
-   ========================================= */
 * {
   margin: 0;
   padding: 0;
@@ -40,9 +34,6 @@ body {
   justify-content: center;
 }
 
-/* =========================================
-   3. Document Container
-   ========================================= */
 .resume-container {
   width: 100%;
   max-width: 940px;
@@ -52,9 +43,6 @@ body {
   overflow: hidden;
 }
 
-/* =========================================
-   4. Header Section
-   ========================================= */
 .resume-header {
   background-color: var(--primary-color);
   color: #ffffff;
@@ -93,7 +81,6 @@ body {
   margin-bottom: 0.6rem;
 }
 
-/* Navigation inside Header */
 .resume-nav {
   display: flex;
   flex-wrap: wrap;
@@ -119,16 +106,12 @@ body {
   user-select: none;
 }
 
-/* =========================================
-   5. Two-Column Body Layout (Grid)
-   ========================================= */
 .resume-body {
   display: grid;
   grid-template-columns: 1fr 1.9fr;
   min-height: 600px;
 }
 
-/* Shared Section Styling */
 .section {
   margin-bottom: 1.8rem;
 }
@@ -143,16 +126,12 @@ body {
   margin-bottom: 0.9rem;
 }
 
-/* =========================================
-   6. Sidebar (Left Column)
-   ========================================= */
 .sidebar {
   background-color: #fafafa;
   padding: 2rem 1.75rem;
   border-right: 1px solid var(--border-color);
 }
 
-/* Contact List & Real Links */
 .contact-list {
   list-style: none;
   font-size: 0.88rem;
@@ -174,7 +153,6 @@ body {
   text-decoration: underline;
 }
 
-/* Education Section */
 .education-item {
   margin-bottom: 1rem;
 }
@@ -210,7 +188,6 @@ body {
   margin-bottom: 0.2rem;
 }
 
-/* Technical Skill Tags */
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
@@ -235,9 +212,6 @@ body {
   background-color: #c7d2fe;
 }
 
-/* =========================================
-   7. Main Content (Right Column)
-   ========================================= */
 .main-content {
   padding: 2rem 2.25rem;
 }
@@ -296,9 +270,6 @@ body {
   line-height: 1.5;
 }
 
-/* =========================================
-   8. Semantic Footer
-   ========================================= */
 .resume-footer {
   text-align: center;
   padding: 1.25rem;
@@ -308,9 +279,6 @@ body {
   color: var(--text-muted);
 }
 
-/* =========================================
-   9. Responsive Design (Mobile / Tablets)
-   ========================================= */
 @media (max-width: 768px) {
   body {
     padding: 0;
@@ -360,9 +328,6 @@ body {
   }
 }
 
-/* =========================================
-   10. Print Media Query
-   ========================================= */
 @media print {
   body {
     background-color: #ffffff;
