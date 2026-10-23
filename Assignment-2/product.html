@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Buy MacBook Pro 16" - Apple Store (Clone)</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <style>
+      :root {
+        --apple-dark: #1d1d1f;
+        --apple-grey: #f5f5f7;
+        --apple-muted: #86868b;
+        --apple-blue: #0071e3;
+        --apple-blue-hover: #0077ed;
+        --apple-border: #d2d2d7;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+        background-color: #ffffff;
+        color: var(--apple-dark);
+        padding-top: 48px;
+      }
+
+      .apple-nav {
+        background-color: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        height: 48px;
+      }
+
+      .apple-nav .nav-link {
+        color: rgba(0, 0, 0, 0.8);
+        font-size: 0.82rem;
+        letter-spacing: -0.01em;
+        transition: color 0.15s ease;
+        padding: 0 0.85rem;
+      }
+
+      .apple-nav .nav-link:hover {
+        color: var(--apple-blue);
+      }
+
+      .breadcrumb-section {
+        background-color: #fafafc;
+        border-bottom: 1px solid #e5e5e7;
+        padding: 0.75rem 0;
+        font-size: 0.82rem;
+      }
+
+      .breadcrumb a {
+        color: var(--apple-muted);
+        text-decoration: none;
+      }
+
+      .breadcrumb a:hover {
+        color: var(--apple-dark);
+        text-decoration: underline;
+      }
+
+      .breadcrumb-item.active {
+        color: var(--apple-dark);
+        font-weight: 500;
+      }
+
+      .product-hero-image-wrapper {
+        background-color: var(--apple-grey);
+        border-radius: 24px;
+        padding: 2.5rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        top: 70px;
+        overflow: hidden;
+      }
+
+      .product-hero-image-wrapper img {
+        max-width: 100%;
+        height: auto;
+        max-height: 480px;
+        object-fit: contain;
+        border-radius: 12px;
+        transition: transform 0.3s ease;
+      }
+
+      .product-hero-image-wrapper:hover img {
+        transform: scale(1.02);
+      }
+
+      .badge-tag {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #b64400;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        display: inline-block;
+        margin-bottom: 0.5rem;
+      }
+
+      .product-title {
+        font-size: 2.4rem;
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        line-height: 1.15;
+        margin-bottom: 0.5rem;
+      }
+
+      .product-price {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: var(--apple-dark);
+        margin-bottom: 1.25rem;
+      }
+
+      .product-description {
+        font-size: 1.05rem;
+        line-height: 1.55;
+        color: #424245;
+        margin-bottom: 1.75rem;
+      }
+
+      .option-card {
+        border: 1.5px solid var(--apple-border);
+        border-radius: 14px;
+        padding: 1rem 1.25rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .option-card.selected {
+        border-color: var(--apple-blue);
+        box-shadow: 0 0 0 1px var(--apple-blue);
+      }
+
+      .quantity-control {
+        max-width: 110px;
+        font-weight: 600;
+        border-radius: 10px;
+        border: 1.5px solid var(--apple-border);
+        text-align: center;
+      }
+
+      .quantity-control:focus {
+        border-color: var(--apple-blue);
+        box-shadow: 0 0 0 0.2rem rgba(0, 113, 227, 0.15);
+      }
+
+      .btn-apple {
+        background-color: var(--apple-blue);
+        color: #ffffff;
+        border-radius: 980px;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        transition: background-color 0.15s ease;
+      }
+
+      .btn-apple:hover {
+        background-color: var(--apple-blue-hover);
+        color: #ffffff;
+      }
+
+      .btn-apple-outline {
+        background-color: transparent;
+        color: var(--apple-blue);
+        border: 1.5px solid var(--apple-blue);
+        border-radius: 980px;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.75rem 1.5rem;
+        transition: all 0.15s ease;
+      }
+
+      .btn-apple-outline:hover {
+        background-color: var(--apple-blue);
+        color: #ffffff;
+      }
+
+      .specs-table {
+        margin-top: 3rem;
+        border-top: 1px solid var(--apple-border);
+        padding-top: 2rem;
+      }
+
+      .specs-table h3 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+      }
+
+      .specs-list dt {
+        font-weight: 600;
+        color: var(--apple-dark);
+        font-size: 0.95rem;
+      }
+
+      .specs-list dd {
+        color: var(--apple-muted);
+        font-size: 0.95rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .apple-footer {
+        background-color: var(--apple-grey);
+        font-size: 0.75rem;
+        color: var(--apple-muted);
+        border-top: 1px solid #d2d2d7;
+        padding-top: 2.5rem;
+        padding-bottom: 2rem;
+        margin-top: 4rem;
+      }
+
+      .apple-footer h6 {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--apple-dark);
+        margin-bottom: 0.8rem;
+      }
+
+      .apple-footer ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .apple-footer ul li {
+        margin-bottom: 0.45rem;
+      }
+
+      .apple-footer a {
+        color: #424245;
+        text-decoration: none;
+      }
+
+      .apple-footer a:hover {
+        text-decoration: underline;
+        color: var(--apple-dark);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg apple-nav fixed-top">
+        <div class="container justify-content-between">
+          <a
+            class="navbar-brand text-dark me-3"
+            href="index.html"
+            aria-label="Apple Home"
+          >
+            <i class="bi bi-apple fs-5"></i>
+          </a>
+
+          <button
+            class="navbar-toggler border-0 shadow-none px-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#appleNavContent"
+            aria-controls="appleNavContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="bi bi-list fs-4"></i>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="appleNavContent"
+          >
+            <ul class="navbar-nav gap-lg-2">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Store</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#products">Mac</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#products">iPad</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#products">iPhone</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#products">Watch</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#products">AirPods</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#products">Accessories</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="d-flex align-items-center">
+            <a
+              href="#"
+              class="text-dark position-relative text-decoration-none"
+              aria-label="Shopping Bag"
+            >
+              <i class="bi bi-bag fs-5"></i>
+              <span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark"
+                style="font-size: 0.6rem"
+              >
+                0
+              </span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <nav aria-label="breadcrumb" class="breadcrumb-section">
+      <div class="container">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html">Store</a></li>
+          <li class="breadcrumb-item"><a href="index.html#products">Mac</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            MacBook Pro 16"
+          </li>
+        </ol>
+      </div>
+    </nav>
+
+    <main class="py-4 py-lg-5">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-12 col-md-6">
+            <div class="product-hero-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1200&q=80"
+                alt="MacBook Pro 16-inch hardware showcase"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <span class="badge-tag">New M3 Max Silicon</span>
+            <h1 class="product-title">MacBook Pro 16"</h1>
+            <p class="text-muted mb-2">
+              Space Black finish with Liquid Retina XDR display
+            </p>
+            <div class="product-price">$2,499.00</div>
+
+            <p class="product-description">
+              The 16-inch MacBook Pro blasts forward with the M3 Max chip, an
+              extraordinarily advanced architecture delivering monstrous
+              performance for extreme workflows. Paired with up to 22 hours of
+              battery life and a stunning Liquid Retina XDR display, it is pro
+              in every dimension.
+            </p>
+
+            <div class="mb-4">
+              <label class="form-label fw-semibold mb-2">Finish</label>
+              <div class="d-flex gap-3">
+                <div class="option-card selected flex-fill text-center">
+                  <strong>Space Black</strong>
+                </div>
+                <div class="option-card flex-fill text-center">
+                  <strong>Silver</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label fw-semibold mb-2"
+                >Unified Memory &amp; SSD</label
+              >
+              <div class="option-card selected mb-2">
+                <div class="d-flex justify-content-between">
+                  <span>36GB Unified Memory / 512GB SSD</span>
+                  <span class="fw-semibold">Included</span>
+                </div>
+              </div>
+              <div class="option-card">
+                <div class="d-flex justify-content-between">
+                  <span>48GB Unified Memory / 1TB SSD</span>
+                  <span class="fw-semibold">+$400.00</span>
+                </div>
+              </div>
+            </div>
+
+            <form class="mb-4" onsubmit="event.preventDefault()">
+              <div class="mb-3">
+                <label for="productQuantity" class="form-label fw-semibold"
+                  >Quantity</label
+                >
+                <div class="d-flex align-items-center gap-3">
+                  <input
+                    type="number"
+                    id="productQuantity"
+                    name="quantity"
+                    class="form-control quantity-control"
+                    value="1"
+                    min="1"
+                    max="10"
+                  />
+                  <span class="text-muted small"
+                    >Free expedited delivery &amp; returns</span
+                  >
+                </div>
+              </div>
+
+              <div class="d-grid gap-2 d-sm-flex">
+                <button type="button" class="btn btn-apple flex-grow-1">
+                  Add to Bag
+                </button>
+                <button type="button" class="btn btn-apple-outline">
+                  <i class="bi bi-heart me-1"></i> Save
+                </button>
+              </div>
+            </form>
+
+            <div class="border rounded-3 p-3 bg-light">
+              <div class="d-flex align-items-start gap-3">
+                <i class="bi bi-box-seam fs-4 text-primary"></i>
+                <div>
+                  <h6 class="mb-1 fw-bold">
+                    Order now, delivers in 2–3 business days
+                  </h6>
+                  <p class="small text-muted mb-0">
+                    Free shipping or in-store pickup available at your local
+                    Apple Store.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="specs-table">
+          <h3>Technical Specifications</h3>
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+              <dl class="specs-list">
+                <dt>Processor</dt>
+                <dd>Apple M3 Max chip with 14-core CPU and 30-core GPU</dd>
+
+                <dt>Display</dt>
+                <dd>
+                  16.2-inch (diagonal) Liquid Retina XDR display; 3456-by-2234
+                  native resolution at 254 ppi with ProMotion up to 120Hz
+                </dd>
+
+                <dt>Memory &amp; Storage</dt>
+                <dd>
+                  36GB unified memory, configurable up to 128GB; 512GB ultrafast
+                  SSD storage
+                </dd>
+              </dl>
+            </div>
+            <div class="col">
+              <dl class="specs-list">
+                <dt>Battery &amp; Power</dt>
+                <dd>
+                  Up to 22 hours Apple TV app movie playback; 140W USB-C Power
+                  Adapter with MagSafe 3
+                </dd>
+
+                <dt>Ports &amp; Connectivity</dt>
+                <dd>
+                  SDXC card slot, HDMI port, 3.5mm headphone jack, MagSafe 3
+                  port, and three Thunderbolt 4 (USB-C) ports
+                </dd>
+
+                <dt>Audio &amp; Camera</dt>
+                <dd>
+                  High-fidelity six-speaker sound system with force-cancelling
+                  woofers; 1080p FaceTime HD camera
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="apple-footer">
+      <div class="container">
+        <div class="row g-4 mb-4">
+          <div class="col-6 col-md-3">
+            <h6>Shop and Learn</h6>
+            <ul>
+              <li><a href="index.html">Store</a></li>
+              <li><a href="index.html#products">Mac</a></li>
+              <li><a href="index.html#products">iPad</a></li>
+              <li><a href="index.html#products">iPhone</a></li>
+              <li><a href="index.html#products">Watch</a></li>
+              <li><a href="index.html#products">AirPods</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <h6>Account</h6>
+            <ul>
+              <li><a href="#">Manage Your Apple ID</a></li>
+              <li><a href="#">Apple Store Account</a></li>
+              <li><a href="#">iCloud.com</a></li>
+            </ul>
+            <h6 class="mt-3">Entertainment</h6>
+            <ul>
+              <li><a href="#">Apple TV+</a></li>
+              <li><a href="#">Apple Music</a></li>
+              <li><a href="#">Apple Arcade</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <h6>Apple Store</h6>
+            <ul>
+              <li><a href="#">Find a Store</a></li>
+              <li><a href="#">Genius Bar</a></li>
+              <li><a href="#">Today at Apple</a></li>
+              <li><a href="#">Order Status</a></li>
+              <li><a href="#">Shopping Help</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <h6>About Apple</h6>
+            <ul>
+              <li><a href="#">Newsroom</a></li>
+              <li><a href="#">Apple Leadership</a></li>
+              <li><a href="#">Career Opportunities</a></li>
+              <li><a href="#">Investors</a></li>
+              <li><a href="#">Ethics &amp; Compliance</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-top pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center"
+        >
+          <p class="m-0 mb-2 mb-md-0">
+            &copy; 2026 Apple Inc. All rights reserved. Built for Web
+            Technologies Assignment 2.
+          </p>
+          <div>
+            <a href="#" class="me-3">Privacy Policy</a>
+            <a href="#" class="me-3">Terms of Use</a>
+            <a href="#">Sales Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
