@@ -1,168 +1,43 @@
-/* ==========================================================================
-   Apple Store Clone - Theme Configuration & Framework Overrides
-   Framework: Bootstrap 5.3.3 (via CDN)
-   ========================================================================== */
-
+/* Custom Apple Palette & Minimalist Brand Tokens */
 :root {
   --apple-dark: #1d1d1f;
-  --apple-grey: #f5f5f7;
-  --apple-muted: #86868b;
   --apple-blue: #0071e3;
   --apple-blue-hover: #0077ed;
-  --apple-border: #d2d2d7;
-  --font-apple:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
-    sans-serif;
+  --apple-grey: #f5f5f7;
 }
 
-/* Base Body Styles */
 body {
-  font-family: var(--font-apple);
-  background-color: #ffffff;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: var(--apple-dark);
   padding-top: 48px; /* Offset for fixed-top navbar */
 }
 
-/* ==========================================================================
-   Navigation Bar (Shared Across index.html & product.html)
-   ========================================================================== */
+/* Apple Translucent Frosted Glass Navbar */
 .apple-nav {
   background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   height: 48px;
 }
 
-.apple-nav .nav-link {
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 0.82rem;
-  letter-spacing: -0.01em;
-  transition: color 0.15s ease;
-  padding: 0 0.85rem;
-}
-
-.apple-nav .nav-link:hover {
-  color: var(--apple-blue);
-}
-
-/* ==========================================================================
-   Homepage Components (index.html)
-   ========================================================================== */
-.hero-banner {
-  background-color: var(--apple-grey);
-  padding: 3.5rem 1rem 2.5rem 1rem;
-  text-align: center;
-}
-
-.hero-banner h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  margin-bottom: 0.5rem;
-}
-
-.hero-banner p {
-  color: var(--apple-muted);
-  font-size: 1.25rem;
-}
-
-/* Product Cards Grid */
+/* Card Hover Elevation */
 .product-card {
-  background-color: #ffffff;
-  border: 1px solid #e5e5e7;
-  border-radius: 18px;
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
 }
 
 .product-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 
-.card-img-wrapper {
-  background-color: var(--apple-grey);
-  height: 240px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.25rem;
-}
-
-.card-img-wrapper img {
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.product-card:hover .card-img-wrapper img {
-  transform: scale(1.04);
-}
-
-.product-card .card-body {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.badge-tag {
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: #b64400;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.35rem;
-}
-
-.product-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: -0.015em;
-  margin-bottom: 0.25rem;
-}
-
-.product-title a {
-  color: var(--apple-dark);
-  text-decoration: none;
-}
-
-.product-title a:hover {
-  color: var(--apple-blue);
-}
-
-.product-subtitle {
-  font-size: 0.88rem;
-  color: var(--apple-muted);
-  margin-bottom: 1rem;
-  min-height: 2.4em;
-}
-
-.product-price {
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin-top: auto;
-  margin-bottom: 1.2rem;
-}
-
-/* Apple Buttons */
+/* Apple Pill-Shaped Buttons */
 .btn-apple {
   background-color: var(--apple-blue);
   color: #ffffff;
-  border-radius: 980px;
-  font-size: 0.88rem;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  border: none;
-  transition: background-color 0.15s ease;
+  border-radius: 999px;
 }
 
 .btn-apple:hover {
@@ -170,178 +45,13 @@ body {
   color: #ffffff;
 }
 
-/* ==========================================================================
-   Product Detail Components (product.html)
-   ========================================================================== */
-.breadcrumb-section {
-  background-color: #fafafc;
-  border-bottom: 1px solid #e5e5e7;
-  padding: 0.75rem 0;
-  font-size: 0.82rem;
-}
-
-.breadcrumb a {
-  color: var(--apple-muted);
-  text-decoration: none;
-}
-
-.breadcrumb a:hover {
-  color: var(--apple-dark);
-  text-decoration: underline;
-}
-
-.breadcrumb-item.active {
-  color: var(--apple-dark);
-  font-weight: 500;
-}
-
-.product-hero-image-wrapper {
-  background-color: var(--apple-grey);
-  border-radius: 24px;
-  padding: 2.5rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: sticky;
-  top: 70px;
-  overflow: hidden;
-}
-
-.product-hero-image-wrapper img {
-  max-width: 100%;
-  height: auto;
-  max-height: 480px;
-  object-fit: contain;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-}
-
-.product-hero-image-wrapper:hover img {
-  transform: scale(1.02);
-}
-
-.detail-title {
-  font-size: 2.4rem;
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  line-height: 1.15;
-  margin-bottom: 0.5rem;
-}
-
-.detail-price {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--apple-dark);
-  margin-bottom: 1.25rem;
-}
-
-.product-description {
-  font-size: 1.05rem;
-  line-height: 1.55;
-  color: #424245;
-  margin-bottom: 1.75rem;
-}
-
-.option-card {
-  border: 1.5px solid var(--apple-border);
-  border-radius: 14px;
-  padding: 1rem 1.25rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.option-card.selected {
-  border-color: var(--apple-blue);
-  box-shadow: 0 0 0 1px var(--apple-blue);
-}
-
-.quantity-control {
-  max-width: 110px;
-  font-weight: 600;
-  border-radius: 10px;
-  border: 1.5px solid var(--apple-border);
-  text-align: center;
-}
-
-.quantity-control:focus {
-  border-color: var(--apple-blue);
-  box-shadow: 0 0 0 0.2rem rgba(0, 113, 227, 0.15);
-}
-
 .btn-apple-outline {
-  background-color: transparent;
   color: var(--apple-blue);
   border: 1.5px solid var(--apple-blue);
-  border-radius: 980px;
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 0.75rem 1.5rem;
-  transition: all 0.15s ease;
+  border-radius: 999px;
 }
 
 .btn-apple-outline:hover {
   background-color: var(--apple-blue);
   color: #ffffff;
-}
-
-.specs-table {
-  margin-top: 3rem;
-  border-top: 1px solid var(--apple-border);
-  padding-top: 2rem;
-}
-
-.specs-table h3 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-}
-
-.specs-list dt {
-  font-weight: 600;
-  color: var(--apple-dark);
-  font-size: 0.95rem;
-}
-
-.specs-list dd {
-  color: var(--apple-muted);
-  font-size: 0.95rem;
-  margin-bottom: 1.25rem;
-}
-
-/* ==========================================================================
-   Footer (Shared)
-   ========================================================================== */
-.apple-footer {
-  background-color: var(--apple-grey);
-  font-size: 0.75rem;
-  color: var(--apple-muted);
-  border-top: 1px solid var(--apple-border);
-  padding-top: 2.5rem;
-  padding-bottom: 2rem;
-}
-
-.apple-footer h6 {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--apple-dark);
-  margin-bottom: 0.8rem;
-}
-
-.apple-footer ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.apple-footer ul li {
-  margin-bottom: 0.45rem;
-}
-
-.apple-footer a {
-  color: #424245;
-  text-decoration: none;
-}
-
-.apple-footer a:hover {
-  text-decoration: underline;
-  color: var(--apple-dark);
 }
