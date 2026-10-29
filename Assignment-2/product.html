@@ -16,8 +16,8 @@
   </head>
   <body class="bg-white">
     <header>
-      <nav class="navbar navbar-expand apple-nav fixed-top border-bottom">
-        <div class="container justify-content-between">
+      <nav class="navbar apple-nav fixed-top border-bottom">
+        <div class="container nav-shell">
           <a
             class="navbar-brand text-dark me-3"
             href="index.html"
@@ -26,7 +26,18 @@
             <i class="bi bi-apple fs-5"></i>
           </a>
 
-          <div class="d-flex justify-content-center overflow-auto py-1">
+          <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+          <label
+            for="nav-toggle"
+            class="nav-toggle-label"
+            aria-label="Toggle navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+
+          <div class="nav-menu">
             <ul class="navbar-nav gap-2 gap-md-3 flex-row">
               <li class="nav-item">
                 <a class="nav-link text-secondary px-2 small" href="index.html"
@@ -78,7 +89,7 @@
             </ul>
           </div>
 
-          <div class="d-flex align-items-center">
+          <div class="d-flex align-items-center cart-wrap">
             <a
               href="#"
               class="text-dark position-relative text-decoration-none"
