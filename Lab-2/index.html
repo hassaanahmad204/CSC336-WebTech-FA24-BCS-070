@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Lab 2 - Responsive Navbar & Grid</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar apple-nav fixed-top border-bottom">
+        <div class="container nav-shell">
+          <a class="navbar-brand text-dark me-3" href="#" aria-label="Home">
+            <i class="bi bi-apple fs-5"></i>
+          </a>
+
+          <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+          <label
+            for="nav-toggle"
+            class="nav-toggle-label"
+            aria-label="Toggle navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+
+          <div class="nav-menu">
+            <ul class="navbar-nav gap-2 gap-md-3 flex-row">
+              <li class="nav-item">
+                <a class="nav-link text-secondary px-2 small" href="#">Store</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary px-2 small" href="#products"
+                  >Mac</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary px-2 small" href="#products"
+                  >iPad</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary px-2 small" href="#products"
+                  >iPhone</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary px-2 small" href="#products"
+                  >Watch</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary px-2 small" href="#products"
+                  >AirPods</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary px-2 small" href="#products"
+                  >Accessories</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="d-flex align-items-center cart-wrap">
+            <a
+              href="#"
+              class="text-dark position-relative text-decoration-none"
+              aria-label="Shopping bag"
+            >
+              <i class="bi bi-bag fs-5"></i>
+              <span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark"
+                style="font-size: 0.6rem"
+                >0</span
+              >
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero bg-body-tertiary py-5 text-center">
+        <div class="container py-3">
+          <h1 class="display-5 fw-bold">
+            Store.
+            <span class="text-secondary fw-normal"
+              >The best way to buy the products you love.</span
+            >
+          </h1>
+          <p class="text-secondary fs-5 mt-2 mb-0">
+            Engineered with Apple silicon. Exceptional performance in every
+            device.
+          </p>
+        </div>
+      </section>
+
+      <section class="py-5" id="products">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-baseline mb-4">
+            <h2 class="h3 fw-bold m-0">All Products</h2>
+            <span class="text-secondary small">8 models available</span>
+          </div>
+
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <div class="col">
+              <article
+                class="card h-100 border rounded-4 overflow-hidden product-card"
+              >
+                <div
+                  class="bg-body-tertiary p-3 d-flex align-items-center justify-content-center card-image-box"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80"
+                    class="img-fluid object-fit-cover rounded-3 mh-100"
+                    alt="MacBook Pro 16-inch"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                  <span
+                    class="text-uppercase fw-bold text-danger small mb-1"
+                    style="font-size: 0.72rem"
+                    >New M3 Max</span
+                  >
+                  <h3 class="h5 fw-bold mb-1">
+                    <a href="#" class="text-decoration-none text-dark"
+                      >MacBook Pro 16"</a
+                    >
+                  </h3>
+                  <p class="text-secondary small mb-3 flex-grow-1">
+                    Mind-blowing performance with Liquid Retina XDR display.
+                  </p>
+                  <div class="fw-bold mb-3">From $2,499</div>
+                  <button
+                    type="button"
+                    class="btn btn-apple w-100 py-2 fw-medium border-0"
+                  >
+                    Add to Bag
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article
+                class="card h-100 border rounded-4 overflow-hidden product-card"
+              >
+                <div
+                  class="bg-body-tertiary p-3 d-flex align-items-center justify-content-center card-image-box"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=600&q=80"
+                    class="img-fluid object-fit-cover rounded-3 mh-100"
+                    alt="MacBook Air 15-inch"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                  <span
+                    class="text-uppercase fw-bold text-danger small mb-1"
+                    style="font-size: 0.72rem"
+                    >Thin &amp; Powerful</span
+                  >
+                  <h3 class="h5 fw-bold mb-1">
+                    <a href="#" class="text-decoration-none text-dark"
+                      >MacBook Air 15"</a
+                    >
+                  </h3>
+                  <p class="text-secondary small mb-3 flex-grow-1">
+                    Incredibly thin design and up to 18 hours of battery life.
+                  </p>
+                  <div class="fw-bold mb-3">From $1,299</div>
+                  <button
+                    type="button"
+                    class="btn btn-apple w-100 py-2 fw-medium border-0"
+                  >
+                    Add to Bag
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article
+                class="card h-100 border rounded-4 overflow-hidden product-card"
+              >
+                <div
+                  class="bg-body-tertiary p-3 d-flex align-items-center justify-content-center card-image-box"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=600&q=80"
+                    class="img-fluid object-fit-cover rounded-3 mh-100"
+                    alt="iPad Pro"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                  <span
+                    class="text-uppercase fw-bold text-danger small mb-1"
+                    style="font-size: 0.72rem"
+                    >Ultra Retina</span
+                  >
+                  <h3 class="h5 fw-bold mb-1">
+                    <a href="#" class="text-decoration-none text-dark"
+                      >iPad Pro</a
+                    >
+                  </h3>
+                  <p class="text-secondary small mb-3 flex-grow-1">
+                    A stunningly advanced tablet for work and creativity.
+                  </p>
+                  <div class="fw-bold mb-3">From $999</div>
+                  <button
+                    type="button"
+                    class="btn btn-apple w-100 py-2 fw-medium border-0"
+                  >
+                    Add to Bag
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article
+                class="card h-100 border rounded-4 overflow-hidden product-card"
+              >
+                <div
+                  class="bg-body-tertiary p-3 d-flex align-items-center justify-content-center card-image-box"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=600&q=80"
+                    class="img-fluid object-fit-cover rounded-3 mh-100"
+                    alt="iPhone 15 Pro"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                  <span
+                    class="text-uppercase fw-bold text-danger small mb-1"
+                    style="font-size: 0.72rem"
+                    >Titanium</span
+                  >
+                  <h3 class="h5 fw-bold mb-1">
+                    <a href="#" class="text-decoration-none text-dark"
+                      >iPhone 15 Pro</a
+                    >
+                  </h3>
+                  <p class="text-secondary small mb-3 flex-grow-1">
+                    The most powerful iPhone with pro-level camera features.
+                  </p>
+                  <div class="fw-bold mb-3">From $999</div>
+                  <button
+                    type="button"
+                    class="btn btn-apple w-100 py-2 fw-medium border-0"
+                  >
+                    Add to Bag
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article
+                class="card h-100 border rounded-4 overflow-hidden product-card"
+              >
+                <div
+                  class="bg-body-tertiary p-3 d-flex align-items-center justify-content-center card-image-box"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=600&q=80"
+                    class="img-fluid object-fit-cover rounded-3 mh-100"
+                    alt="Apple Watch Ultra"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                  <span
+                    class="text-uppercase fw-bold text-danger small mb-1"
+                    style="font-size: 0.72rem"
+                    >Adventure</span
+                  >
+                  <h3 class="h5 fw-bold mb-1">
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Apple Watch Ultra</a
+                    >
+                  </h3>
+                  <p class="text-secondary small mb-3 flex-grow-1">
+                    Built for endurance, with precision health tracking.
+                  </p>
+                  <div class="fw-bold mb-3">From $799</div>
+                  <button
+                    type="button"
+                    class="btn btn-apple w-100 py-2 fw-medium border-0"
+                  >
+                    Add to Bag
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article
+                class="card h-100 border rounded-4 overflow-hidden product-card"
+              >
+                <div
+                  class="bg-body-tertiary p-3 d-flex align-items-center justify-content-center card-image-box"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1561154464-82e9adf32764?auto=format&fit=crop&w=600&q=80"
+                    class="img-fluid object-fit-cover rounded-3 mh-100"
+                    alt="AirPods Pro"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                  <span
+                    class="text-uppercase fw-bold text-danger small mb-1"
+                    style="font-size: 0.72rem"
+                    >Noise Canceling</span
+                  >
+                  <h3 class="h5 fw-bold mb-1">
+                    <a href="#" class="text-decoration-none text-dark"
+                      >AirPods Pro</a
+                    >
+                  </h3>
+                  <p class="text-secondary small mb-3 flex-grow-1">
+                    Immersive sound with Adaptive Audio and comfort fit.
+                  </p>
+                  <div class="fw-bold mb-3">From $249</div>
+                  <button
+                    type="button"
+                    class="btn btn-apple w-100 py-2 fw-medium border-0"
+                  >
+                    Add to Bag
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article
+                class="card h-100 border rounded-4 overflow-hidden product-card"
+              >
+                <div
+                  class="bg-body-tertiary p-3 d-flex align-items-center justify-content-center card-image-box"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=600&q=80"
+                    class="img-fluid object-fit-cover rounded-3 mh-100"
+                    alt="Magic Keyboard"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                  <span
+                    class="text-uppercase fw-bold text-danger small mb-1"
+                    style="font-size: 0.72rem"
+                    >Workspace</span
+                  >
+                  <h3 class="h5 fw-bold mb-1">
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Magic Keyboard</a
+                    >
+                  </h3>
+                  <p class="text-secondary small mb-3 flex-grow-1">
+                    Comfortable typing and seamless connectivity for your setup.
+                  </p>
+                  <div class="fw-bold mb-3">From $179</div>
+                  <button
+                    type="button"
+                    class="btn btn-apple w-100 py-2 fw-medium border-0"
+                  >
+                    Add to Bag
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article
+                class="card h-100 border rounded-4 overflow-hidden product-card"
+              >
+                <div
+                  class="bg-body-tertiary p-3 d-flex align-items-center justify-content-center card-image-box"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?auto=format&fit=crop&w=600&q=80"
+                    class="img-fluid object-fit-cover rounded-3 mh-100"
+                    alt="Studio Display"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                  <span
+                    class="text-uppercase fw-bold text-danger small mb-1"
+                    style="font-size: 0.72rem"
+                    >Display</span
+                  >
+                  <h3 class="h5 fw-bold mb-1">
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Studio Display</a
+                    >
+                  </h3>
+                  <p class="text-secondary small mb-3 flex-grow-1">
+                    A brilliant 5K monitor built to elevate every workspace.
+                  </p>
+                  <div class="fw-bold mb-3">From $1,599</div>
+                  <button
+                    type="button"
+                    class="btn btn-apple w-100 py-2 fw-medium border-0"
+                  >
+                    Add to Bag
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
