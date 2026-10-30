@@ -145,3 +145,76 @@ body {
     border-radius: 0.5rem;
   }
 }
+
+/* ==========================================================================
+   TASK 1: CSS-Only Category Filter (hsl(130, 70%, 45%))
+   ========================================================================== */
+:root {
+  --accent-color: hsl(130, 70%, 45%);
+}
+
+.category-filter-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+/* Hide actual radio buttons */
+.category-filter-wrapper input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Style filter labels as Apple-style pill buttons */
+.filter-btn {
+  display: inline-block;
+  padding: 0.45rem 1.15rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1d1d1f;
+  background-color: #f5f5f7;
+  border: 1px solid #d2d2d7;
+  border-radius: 980px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  background-color: #e8e8ed;
+}
+
+/* Selected state using Accent Color H = 130 */
+.category-filter-wrapper input[type="radio"]:checked + .filter-btn {
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Zero JavaScript Filtering Logic via :has() */
+#filter-container:has(#cat-mac:checked)
+  ~ #productGrid
+  .product-col:not([data-category="mac"]) {
+  display: none !important;
+}
+
+#filter-container:has(#cat-iphone:checked)
+  ~ #productGrid
+  .product-col:not([data-category="iphone"]) {
+  display: none !important;
+}
+
+#filter-container:has(#cat-ipad:checked)
+  ~ #productGrid
+  .product-col:not([data-category="ipad"]) {
+  display: none !important;
+}
+
+#filter-container:has(#cat-wearables:checked)
+  ~ #productGrid
+  .product-col:not([data-category="wearables"]) {
+  display: none !important;
+}
