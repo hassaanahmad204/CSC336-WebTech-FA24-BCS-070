@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Apple Store (Clone) - Shop Mac, iPhone, iPad & More</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-white">
+    <header>
+      <nav class="navbar apple-nav fixed-top border-bottom">
+        <div class="container nav-shell">
+          <a
+            class="navbar-brand text-dark me-3"
+            href="index.html"
+            aria-label="Apple Home"
+          >
+            <i class="bi bi-apple fs-5"></i>
+          </a>
+
+          <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+          <label
+            for="nav-toggle"
+            class="nav-toggle-label"
+            aria-label="Toggle navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+
+          <div class="nav-menu">
+            <ul class="navbar-nav gap-2 gap-md-3 flex-row">
+              <li class="nav-item">
+                <a class="nav-link text-secondary px-2 small" href="index.html"
+                  >Store</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary px-2 small" href="#products"
+                  >Mac</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary px-2 small" href="#products"
+                  >iPad</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary px-2 small" href="#products"
+                  >iPhone</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary px-2 small" href="#products"
+                  >Watch</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary px-2 small" href="#products"
+                  >AirPods</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary px-2 small" href="#products"
+                  >Accessories</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="d-flex align-items-center cart-wrap">
+            <a
+              href="#"
+              class="text-dark position-relative text-decoration-none"
+              aria-label="Shopping Bag"
+            >
+              <i class="bi bi-bag fs-5"></i>
+              <span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark"
+                style="font-size: 0.6rem"
+                >0</span
+              >
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="bg-body-tertiary py-5 text-center">
+        <div class="container py-3">
+          <h1 class="display-5 fw-bold">
+            Store.
+            <span class="text-secondary fw-normal"
+              >The best way to buy the products you love.</span
+            >
+          </h1>
+          <p class="text-secondary fs-5 mt-2 mb-0">
+            Engineered with Apple silicon. Exceptional performance in every
+            device.
+          </p>
+        </div>
+      </section>
+
+      <section class="py-5" id="products">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-baseline mb-4">
+            <h2 class="h3 fw-bold m-0">All Products</h2>
+            <span class="text-secondary small">8 models available</span>
+          </div>
+
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <div class="col">
+              <article
+                class="card h-100 border rounded-4 overflow-hidden product-card"
+              >
+                <div
+                  class="bg-body-tertiary p-3 d-flex align-items-center justify-content-center"
+                  style="height: 230px"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80"
+                    class="img-fluid object-fit-cover rounded-3 mh-100"
+                    alt="MacBook Pro 16-inch"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                  <span
+                    class="text-uppercase fw-bold text-danger small mb-1"
+                    style="font-size: 0.72rem"
+                    >New M3 Max</span
+                  >
+                  <h3 class="h5 fw-bold mb-1">
+                    <a
+                      href="product.html"
+                      class="text-decoration-none text-dark"
+                      >MacBook Pro 16"</a
+                    >
+                  </h3>
+                  <p class="text-secondary small mb-3 flex-grow-1">
+                    Mind-blowing performance with Liquid Retina XDR display.
+                  </p>
+                  <div class="fw-bold mb-3">From $2,499</div>
+                  <button
+                    type="button"
+                    class="btn btn-apple w-100 py-2 fw-medium border-0"
+                  >
+                    Add to Bag
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article
+                class="card h-100 border rounded-4 overflow-hidden product-card"
+              >
+                <div
+                  class="bg-body-tertiary p-3 d-flex align-items-center justify-content-center"
+                  style="height: 230px"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=600&q=80"
+                    class="img-fluid object-fit-cover rounded-3 mh-100"
+                    alt="MacBook Air 15-inch"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                  <span
+                    class="text-uppercase fw-bold text-danger small mb-1"
+                    style="font-size: 0.72rem"
+                    >Thin &amp; Powerful</span
+                  >
+                  <h3 class="h5 fw-bold mb-1">
+                    <a
+                      href="product.html"
+                      class="text-decoration-none text-dark"
+                      >MacBook Air 15"</a
+                    >
+                  </h3>
+                  <p class="text-secondary small mb-3 flex-grow-1">
+                    Incredibly thin design and up to 18 hours of battery life.
+                  </p>
+                  <div class="fw-bold mb-3">From $1,299</div>
+                  <button
+                    type="button"
+                    class="btn btn-apple w-100 py-2 fw-medium border-0"
+                  >
+                    Add to Bag
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article
+                class="card h-100 border rounded-4 overflow-hidden product-card"
+              >
+                <div
+                  class="bg-body-tertiary p-3 d-flex align-items-center justify-content-center"
+                  style="height: 230px"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=600&q=80"
+                    class="img-fluid object-fit-cover rounded-3 mh-100"
+                    alt="iPhone 16 Pro"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                  <span
+                    class="text-uppercase fw-bold text-danger small mb-1"
+                    style="font-size: 0.72rem"
+                    >Titanium Design</span
+                  >
+                  <h3 class="h5 fw-bold mb-1">
+                    <a
+                      href="product.html"
+                      class="text-decoration-none text-dark"
+                      >iPhone 16 Pro</a
+                    >
+                  </h3>
+                  <p class="text-secondary small mb-3 flex-grow-1">
+                    A18 Pro chip, Camera Control button, and titanium finish.
+                  </p>
+                  <div class="fw-bold mb-3">From $999</div>
+                  <button
+                    type="button"
+                    class="btn btn-apple w-100 py-2 fw-medium border-0"
+                  >
+                    Add to Bag
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article
+                class="card h-100 border rounded-4 overflow-hidden product-card"
+              >
+                <div
+                  class="bg-body-tertiary p-3 d-flex align-items-center justify-content-center"
+                  style="height: 230px"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=600&q=80"
+                    class="img-fluid object-fit-cover rounded-3 mh-100"
+                    alt="iPhone 16"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                  <span
+                    class="text-uppercase fw-bold text-danger small mb-1"
+                    style="font-size: 0.72rem"
+                    >Dynamic Color</span
+                  >
+                  <h3 class="h5 fw-bold mb-1">
+                    <a
+                      href="product.html"
+                      class="text-decoration-none text-dark"
+                      >iPhone 16</a
+                    >
+                  </h3>
+                  <p class="text-secondary small mb-3 flex-grow-1">
+                    Action button, 48MP Fusion camera, and A18 chip power.
+                  </p>
+                  <div class="fw-bold mb-3">From $799</div>
+                  <button
+                    type="button"
+                    class="btn btn-apple w-100 py-2 fw-medium border-0"
+                  >
+                    Add to Bag
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article
+                class="card h-100 border rounded-4 overflow-hidden product-card"
+              >
+                <div
+                  class="bg-body-tertiary p-3 d-flex align-items-center justify-content-center"
+                  style="height: 230px"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=600&q=80"
+                    class="img-fluid object-fit-cover rounded-3 mh-100"
+                    alt="iPad Pro M4"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                  <span
+                    class="text-uppercase fw-bold text-danger small mb-1"
+                    style="font-size: 0.72rem"
+                    >Ultra Thin</span
+                  >
+                  <h3 class="h5 fw-bold mb-1">
+                    <a
+                      href="product.html"
+                      class="text-decoration-none text-dark"
+                      >iPad Pro (M4)</a
+                    >
+                  </h3>
+                  <p class="text-secondary small mb-3 flex-grow-1">
+                    Ultra Retina XDR display with groundbreaking performance.
+                  </p>
+                  <div class="fw-bold mb-3">From $999</div>
+                  <button
+                    type="button"
+                    class="btn btn-apple w-100 py-2 fw-medium border-0"
+                  >
+                    Add to Bag
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article
+                class="card h-100 border rounded-4 overflow-hidden product-card"
+              >
+                <div
+                  class="bg-body-tertiary p-3 d-flex align-items-center justify-content-center"
+                  style="height: 230px"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1561154464-82e9adf32764?auto=format&fit=crop&w=600&q=80"
+                    class="img-fluid object-fit-cover rounded-3 mh-100"
+                    alt="iPad Air"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                  <span
+                    class="text-uppercase fw-bold text-danger small mb-1"
+                    style="font-size: 0.72rem"
+                    >Fresh Colors</span
+                  >
+                  <h3 class="h5 fw-bold mb-1">
+                    <a
+                      href="product.html"
+                      class="text-decoration-none text-dark"
+                      >iPad Air 11"</a
+                    >
+                  </h3>
+                  <p class="text-secondary small mb-3 flex-grow-1">
+                    Supercharged by the M2 chip with Magic Keyboard support.
+                  </p>
+                  <div class="fw-bold mb-3">From $599</div>
+                  <button
+                    type="button"
+                    class="btn btn-apple w-100 py-2 fw-medium border-0"
+                  >
+                    Add to Bag
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article
+                class="card h-100 border rounded-4 overflow-hidden product-card"
+              >
+                <div
+                  class="bg-body-tertiary p-3 d-flex align-items-center justify-content-center"
+                  style="height: 230px"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=600&q=80"
+                    class="img-fluid object-fit-cover rounded-3 mh-100"
+                    alt="Apple Watch Series 10"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                  <span
+                    class="text-uppercase fw-bold text-danger small mb-1"
+                    style="font-size: 0.72rem"
+                    >Thinnest Watch</span
+                  >
+                  <h3 class="h5 fw-bold mb-1">
+                    <a
+                      href="product.html"
+                      class="text-decoration-none text-dark"
+                      >Apple Watch Series 10</a
+                    >
+                  </h3>
+                  <p class="text-secondary small mb-3 flex-grow-1">
+                    Our biggest display yet with sleep apnea detection
+                    notifications.
+                  </p>
+                  <div class="fw-bold mb-3">From $399</div>
+                  <button
+                    type="button"
+                    class="btn btn-apple w-100 py-2 fw-medium border-0"
+                  >
+                    Add to Bag
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article
+                class="card h-100 border rounded-4 overflow-hidden product-card"
+              >
+                <div
+                  class="bg-body-tertiary p-3 d-flex align-items-center justify-content-center"
+                  style="height: 230px"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?auto=format&fit=crop&w=600&q=80"
+                    class="img-fluid object-fit-cover rounded-3 mh-100"
+                    alt="AirPods Pro 2"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                  <span
+                    class="text-uppercase fw-bold text-danger small mb-1"
+                    style="font-size: 0.72rem"
+                    >Pro Audio</span
+                  >
+                  <h3 class="h5 fw-bold mb-1">
+                    <a
+                      href="product.html"
+                      class="text-decoration-none text-dark"
+                      >AirPods Pro 2</a
+                    >
+                  </h3>
+                  <p class="text-secondary small mb-3 flex-grow-1">
+                    Active Noise Cancellation with all-new Hearing Health
+                    features.
+                  </p>
+                  <div class="fw-bold mb-3">From $249</div>
+                  <button
+                    type="button"
+                    class="btn btn-apple w-100 py-2 fw-medium border-0"
+                  >
+                    Add to Bag
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="bg-body-tertiary border-top pt-5 pb-4 mt-5 text-secondary"
+      style="font-size: 0.75rem"
+    >
+      <div class="container">
+        <div class="row g-4 mb-4">
+          <div class="col-6 col-md-3">
+            <h6 class="fw-bold text-dark mb-2" style="font-size: 0.75rem">
+              Shop and Learn
+            </h6>
+            <ul class="list-unstyled d-flex flex-column gap-1">
+              <li>
+                <a href="index.html" class="text-secondary text-decoration-none"
+                  >Store</a
+                >
+              </li>
+              <li>
+                <a href="#products" class="text-secondary text-decoration-none"
+                  >Mac</a
+                >
+              </li>
+              <li>
+                <a href="#products" class="text-secondary text-decoration-none"
+                  >iPad</a
+                >
+              </li>
+              <li>
+                <a href="#products" class="text-secondary text-decoration-none"
+                  >iPhone</a
+                >
+              </li>
+              <li>
+                <a href="#products" class="text-secondary text-decoration-none"
+                  >Watch</a
+                >
+              </li>
+              <li>
+                <a href="#products" class="text-secondary text-decoration-none"
+                  >AirPods</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3">
+            <h6 class="fw-bold text-dark mb-2" style="font-size: 0.75rem">
+              Account
+            </h6>
+            <ul class="list-unstyled d-flex flex-column gap-1">
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Manage Apple ID</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Apple Store Account</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >iCloud.com</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3">
+            <h6 class="fw-bold text-dark mb-2" style="font-size: 0.75rem">
+              Apple Store
+            </h6>
+            <ul class="list-unstyled d-flex flex-column gap-1">
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Find a Store</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Genius Bar</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Today at Apple</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Order Status</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3">
+            <h6 class="fw-bold text-dark mb-2" style="font-size: 0.75rem">
+              About Apple
+            </h6>
+            <ul class="list-unstyled d-flex flex-column gap-1">
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Newsroom</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Leadership</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Investors</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Ethics</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-top pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center"
+        >
+          <p class="m-0 mb-2 mb-md-0">
+            &copy; 2026 Apple Inc. All rights reserved. Built for Web
+            Technologies Assignment 2.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-secondary text-decoration-none"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-secondary text-decoration-none"
+              >Terms of Use</a
+            >
+            <a href="#" class="text-secondary text-decoration-none"
+              >Sales Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
