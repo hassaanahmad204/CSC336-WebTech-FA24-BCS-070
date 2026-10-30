@@ -1,8 +1,10 @@
+/* Custom Apple Palette & Minimalist Brand Tokens */
 :root {
   --apple-dark: #1d1d1f;
   --apple-blue: #0071e3;
   --apple-blue-hover: #0077ed;
   --apple-grey: #f5f5f7;
+  --accent-color: hsl(130, 70%, 45%);
 }
 
 body {
@@ -12,6 +14,7 @@ body {
   padding-top: 48px;
 }
 
+/* Apple Translucent Frosted Glass Navbar */
 .apple-nav {
   background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(20px);
@@ -19,51 +22,7 @@ body {
   height: 48px;
 }
 
-.nav-shell {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.nav-toggle {
-  display: none;
-}
-
-.nav-toggle-label {
-  display: none;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0.25rem;
-  cursor: pointer;
-}
-
-.nav-toggle-label span {
-  display: block;
-  width: 1.1rem;
-  height: 2px;
-  background-color: var(--apple-dark);
-  border-radius: 2px;
-}
-
-.nav-menu {
-  display: block;
-  flex: 1;
-}
-
-.nav-menu .navbar-nav {
-  justify-content: center;
-  align-items: center;
-}
-
-.cart-wrap {
-  margin-left: auto;
-}
-
+/* Card Hover Elevation */
 .product-card {
   transition:
     transform 0.25s ease,
@@ -75,6 +34,7 @@ body {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 
+/* Apple Pill-Shaped Buttons */
 .btn-apple {
   background-color: var(--apple-blue);
   color: #ffffff;
@@ -97,62 +57,7 @@ body {
   color: #ffffff;
 }
 
-@media (max-width: 768px) {
-  .apple-nav {
-    height: auto;
-    min-height: 48px;
-  }
-
-  .nav-shell {
-    row-gap: 0.5rem;
-  }
-
-  .nav-toggle-label {
-    display: flex;
-    order: 2;
-    margin-left: auto;
-  }
-
-  .cart-wrap {
-    order: 3;
-  }
-
-  .nav-menu {
-    display: none;
-    width: 100%;
-    order: 4;
-    flex-basis: 100%;
-  }
-
-  .nav-toggle:checked + .nav-toggle-label + .nav-menu {
-    display: block;
-  }
-
-  .nav-menu .navbar-nav {
-    flex-direction: column !important;
-    align-items: stretch;
-    gap: 0.25rem !important;
-    padding: 0.5rem 0;
-  }
-
-  .nav-menu .nav-item {
-    width: 100%;
-  }
-
-  .nav-menu .nav-link {
-    display: block;
-    padding: 0.75rem 0.5rem;
-    border-radius: 0.5rem;
-  }
-}
-
-/* ==========================================================================
-   TASK 1: CSS-Only Category Filter (hsl(130, 70%, 45%))
-   ========================================================================== */
-:root {
-  --accent-color: hsl(130, 70%, 45%);
-}
-
+/* Category Filter Rules (Task 1) */
 .category-filter-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -161,14 +66,12 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Hide actual radio buttons */
 .category-filter-wrapper input[type="radio"] {
   position: absolute;
   opacity: 0;
   pointer-events: none;
 }
 
-/* Style filter labels as Apple-style pill buttons */
 .filter-btn {
   display: inline-block;
   padding: 0.45rem 1.15rem;
@@ -186,7 +89,6 @@ body {
   background-color: #e8e8ed;
 }
 
-/* Selected state using Accent Color H = 130 */
 .category-filter-wrapper input[type="radio"]:checked + .filter-btn {
   background-color: var(--accent-color) !important;
   border-color: var(--accent-color) !important;
@@ -194,7 +96,6 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Zero JavaScript Filtering Logic via :has() */
 #filter-container:has(#cat-mac:checked)
   ~ #productGrid
   .product-col:not([data-category="mac"]) {
@@ -218,3 +119,55 @@ body {
   .product-col:not([data-category="wearables"]) {
   display: none !important;
 }
+
+/* ========================================================================== */
+/* START: ADDED FOR TASK 2 (CSS Grid Layout & Sticky Details Box)             */
+/* Breakpoint BP = 670px, Sticky Top = 100px                                  */
+/* ========================================================================== */
+
+/* Grid Container: Below BP (670px), stacked in 1 single column */
+.product-grid-layout {
+  display: grid;
+  gap: 2rem;
+  grid-template-areas:
+    "image"
+    "details"
+    "description";
+  grid-template-columns: 1fr;
+}
+
+/* Named Grid Areas mapping */
+.area-image {
+  grid-area: image;
+}
+
+.area-details {
+  grid-area: details;
+}
+
+.area-description {
+  grid-area: description;
+}
+
+/* From BP = 670px and wider: Side-by-side with full-width description underneath */
+@media (min-width: 670px) {
+  .product-grid-layout {
+    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-areas:
+      "image details"
+      "description description";
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  /* Details box stays sticky at (N mod 40) + 70 = 100px from the top */
+  .area-details {
+    position: sticky;
+    top: 100px;
+    z-index: 10;
+    align-self: start;
+  }
+}
+/* ========================================================================== */
+/* END: ADDED FOR TASK 2                                                      */
+/* ========================================================================== */
